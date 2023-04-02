@@ -80,7 +80,7 @@ const generateHTML = function (teamArray) {
     generateEngineerScript(teamArray);
     generateInternScript(teamArray)
     console.log(htmlScript.join(""))
-    return htmlScript.join("")
+    return htmlScript.join("<p></p>")
 }
 
 

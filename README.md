@@ -12,5 +12,4 @@ The link for the GitHub repository can be found [Here](https://github.com/hmccar
 ## Walkthrough video
 
 
-
-![Walkthrough video](assets/mod10walkthrough.gif)
+![Walkthrough Video](assets/Mod10WalkthroughVideo.gif)

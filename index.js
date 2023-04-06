@@ -2,7 +2,7 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const HTML = require('./src/htmlTemplate')
+const HTML = require('./src/htmlTemplate.js')
 
 // setting up HTML path
 
@@ -17,7 +17,7 @@ const Engineer = require('./lib/engineerConstructor');
 const Intern = require('./lib/internConstructor');
 
 // creates blank array for team members to be added into
-var teamArray = [];
+teamArray = [];
 
 // function for choosing an employee to add
 function addEmployee() {
@@ -40,14 +40,12 @@ function addEmployee() {
                 addEngineer();
                 break;
 
-            case "I'm done adding employees":
-                buildHTML(teamArray);
-                break
-            
             case "Intern": 
                 addIntern();
                 break;
-        }
+            
+            default: buildHTML();    
+            }
     })}
 
 // fucntion to add a manager
@@ -79,9 +77,9 @@ async function addTeamManager() {
 
         ]).then((answers => {
             const manager = new TeamManager(answers.managerName, answers.managerEmployeeID, answers.managerEmail, answers.managerOfficeNumber);
-            console.log(manager)
+           
             teamArray.push(manager);
-            console.log(teamArray);
+          
             addEmployee();
         }))
 }
